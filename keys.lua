@@ -21,7 +21,7 @@ return {
   },
 
   -- ペインを閉じる（vim などが動いていて Ctrl+d が効かない時用）
-  { key = "x", mods = "CTRL|SHIFT", action = act.CloseCurrentPane({ confirm = true }) },
+  { key = "w", mods = "CTRL|SHIFT", action = act.CloseCurrentPane({ confirm = true }) },
 
   -- ペイン移動（vim と同じ hjkl 配列）
   { key = "h", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Left") },
