@@ -28,11 +28,10 @@ config.freetype_render_target = "Normal"
 --------------------------------------------------------------------
 -- style
 --------------------------------------------------------------------
-config.color_scheme = "Tokyo Night"
-config.window_background_opacity = 0.7
+config.color_scheme = "iceberg-dark"
+config.window_background_opacity = 0.9
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 config.hide_tab_bar_if_only_one_tab = false
-config.use_fancy_tab_bar = false
 config.adjust_window_size_when_changing_font_size = false
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
@@ -50,5 +49,11 @@ config.default_cursor_style = "BlinkingBlock"
 -- 定義の実体は keys.lua。require は package.path の先頭にある
 -- ~/.config/wezterm/?.lua から解決されるので拡張子もパスも不要。
 config.keys = require("keys")
+
+--------------------------------------------------------------------
+-- タブの見た目
+--------------------------------------------------------------------
+-- 斜め（平行四辺形）タブ。use_fancy_tab_bar = false もこの中で入れている。
+require("tabs").apply(config)
 
 return config
